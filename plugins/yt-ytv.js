@@ -41,16 +41,16 @@ const handler = async (m, { conn, args, command }) => {
   }
 
   if (dlUrl) {
-    await m.reply(`Permintaan download video YouTube. Sedang diproses, mohon bersabar...`)
+    await m.reply(`Processing your request, It will be take a while!`)
 
     await conn.sendMessage(m.chat, { video: { url: dlUrl, caption: title, ...thumb } }, { quoted: m })
 
     await m.reply(`▢ Title: ${title}
 ▢ Resolution: ${selectedResolution}
 ▢ Size: ${size}
-▢ Video telah berhasil diunduh!`)
+*Video has been successfully downloaded!*`)
   } else {
-    await m.reply(`Maaf, video tidak tersedia untuk diunduh.`)
+    await m.reply(`*Sorry, The video is not available for download!*`)
   }
 }
 
