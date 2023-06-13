@@ -28,14 +28,14 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
 'pageCount': 666,contextInfo: { externalAdReply: { showAdAttribution: true,
 mediaType:  2,
 mediaUrl: `${url}`,
-title: `AUDIO SEDANG DIKIRIM...`,
+title: `DOWNLOADING AUDIO...`,
 body: wm,
-sourceUrl: 'http://wa.me/12522518391', thumbnail: await ( await conn.getFile(thumbnail)).data
+sourceUrl: 'http://wa.me/94789481495', thumbnail: await ( await conn.getFile(thumbnail)).data
   }
  } 
 })
   
-  //let buttons = [{ buttonText: { displayText: '📽VIDEO' }, buttonId: `${usedPrefix}ytv ${url} 360` }]
+  //let buttons = [{ buttonText: { displayText: '📽 VIDEO' }, buttonId: `${usedPrefix}ytv ${url} 360` }]
  //let msg = await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author, buttons }, { quoted: m })
 
   const yt = await youtubedlv2(url).catch(async _ => await youtubedl(url))
