@@ -4,7 +4,7 @@ import {
 } from '@bochilteam/scraper'
 
 var handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'Urlnya Mana Banh? >:('
+  if (!args[0]) throw '*Please give me a YouTube link!*'
   let q = '128kbps'
   let v = args[0]
 
@@ -14,14 +14,15 @@ var handler = async (m, { conn, args }) => {
   const ttl = await yt.title
   const size = await yt.audio[q].fileSizeH
 
-  await m.reply('Permintaan download audio/mp3 youtube sedang diproses, mohon bersabar...')
+  await m.reply('Processing your request, It will be take a while!')
 
   // Tampilkan informasi file beserta thumbnail
   const info = `
-▢ Judul: ${ttl}
-▢ Ukuran: ${size}
-▢ Link YouTube: ${v}
-▢ Credits by Xnuvers007, https://github.com/Xnuvers007`
+▢ Title: *${ttl}*
+▢ Size: *${size}*
+▢ Link: *${v}*
+
+*『 𝙼𝚉𝙽 𝙱𝙾𝚃𝚂 』• 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻*`
 
   // Kirim pesan dan file audio ke user
   await conn.sendMessage(m.chat, { 
