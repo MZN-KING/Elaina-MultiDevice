@@ -1,8 +1,8 @@
 let handler = async (m, { conn, text }) => {
 
 let [nomor, pesan, jumlah] = text.split('|')
-if (!nomor) throw '*[ ⚠️ ] HARAP MASUKKAN NOMOR YANG AKAN DI SPAM PESAN!*\n*PENGGUNAAN YANG BENAR:*\n*—◉ #spamwa nomor|teks|jumlah*\n*jumlah:*\n*—◉ #spamwa 5219999999999|hai :v|25*'
-if (!pesan) throw '*[ ⚠️ ] HARAP MASUKKAN PESAN KE SPAM!*\n*GUNAKAN YANG BENAR:*\n*—◉ #spamwa nomor|teks|jumlah*\n*CONTOH:*\n*—◉ #spamwa 5219999999999|merespons :v|25*'
+if (!nomor) throw '*⚠️ Please Enter the value of number that will be spammed!*\n* Example:*\n*—◉ #spamwa number|text|value*\n*Example:*\n*—◉ #spamwa 94999999999|Hello!|25*'
+if (!pesan) throw '*[ ⚠️ ] HARAP MASUKKAN PESAN KE SPAM!*\n*GUNAKAN YANG BENAR:*\n*—◉ #spamwa number|text|value*\n*CONTOH:*\n*—◉ #spamwa 94999999999|merespons :v|25*'
 if (jumlah && isNaN(jumlah)) throw '*[ ⚠️ ] KUANTITAS HARUS ADALAH NOMOR!*\n*PENGGUNAAN YANG TEPAT:*\n*—◉ #spamwa nomor|teks|jumlah*\n*CONTOH:*\n*—◉ #spamwa 5219999999999|merespons :v|25*'
 
 let fixedNumber = nomor.replace(/[-+<>@]/g, '').replace(/ +/g, '').replace(/^[0]/g, '62') + '@s.whatsapp.net'
