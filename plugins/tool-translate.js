@@ -29,7 +29,7 @@ let handler = async (m, { args, usedPrefix, command }) => {
     lang = args[0];
     text = args.slice(1).join(' ');
   } else {
-    throw `Ex: ${usedPrefix + command} dariBahasa|keBahasa Apa kabar?`;
+    throw `Ex: ${usedPrefix + command} fromLanguage|toLanguage Who are you?`;
   }
 
   let [from_lang, to_lang] = lang.split('|');
@@ -43,12 +43,12 @@ let handler = async (m, { args, usedPrefix, command }) => {
     result = await response.json();
 
     if (response.status !== 200) {
-      throw `Terjadi kesalahan saat melakukan request: ${response.statusText}`;
+      throw `An error occurred while making the request: ${response.statusText}`;
     }
   }
 
   let { "code/status": status, credits, from, text: original_text, to, translated_text } = result;
-  m.reply(`*Terdeteksi Bahasa:* ${from}\n*Ke Bahasa:* ${to}\n\n*Original Text:* ${original_text}\n*Terjemahan:* ${translated_text}\n\n*Kredit:* ${credits}`);
+  m.reply(`*From Language:* ${from}\n*To Language:* ${to}\n\n*Original Text:* ${original_text}\n*Translated Text:* ${translated_text}\n\n*Credit:* ${credits}`);
 };
 
 handler.help = ['translate'].map(v => v + ' <from_lang>|<to_lang> <teks>');
