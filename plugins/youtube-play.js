@@ -8,22 +8,22 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!search) throw 'Video Not Found, Try Another Title'
   let { title, thumbnail, timestamp, views, ago, url } = vid
 
-  let captvid = `╭──── 〔 Y O U T U B E 〕 ─⬣
-⬡ Judul: ${title}
-⬡ Durasi: ${timestamp}
+  let captvid = `╭──── 〔 𝙼𝚉𝙽 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 〕 ─⬣
+⬡ Title: ${title}
+⬡ Duration: ${timestamp}
 ⬡ Views: ${views}
 ⬡ Upload: ${ago}
 ⬡ Link: ${url}
 ╰────────⬣`
-  conn.sendButton(m.chat, `╭──── 〔 Y O U T U B E 〕 ─⬣
-⬡ Judul: ${title}
-⬡ Durasi: ${timestamp}
+  conn.sendButton(m.chat, `╭──── 〔 𝙼𝚉𝙽 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 〕 ─⬣
+⬡ Title: ${title}
+⬡ Duration: ${timestamp}
 ⬡ Views: ${views}
 ⬡ Upload: ${ago}
 ⬡ Link: ${url}
-╰────────⬣`, author.trim(), await( await conn.getFile(thumbnail)).data, ['📽VIDEO', `${usedPrefix}getvid ${url} 360`], false, { quoted: m, 'document': { 'url':'https://wa.me/12522518391' },
+╰────────⬣`, author.trim(), await( await conn.getFile(thumbnail)).data, ['📽 VIDEO', `${usedPrefix}getvid ${url} 360`], false, { quoted: m, 'document': { 'url':'https://wa.me/94789481495' },
 'mimetype': global.dpdf,
-'fileName': `𝕐𝕠𝕦𝕋𝕦𝕓𝕖 ℙ𝕝𝕒𝕪𝕤`,
+'fileName': `𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙿𝙻𝙰𝚈`,
 'fileLength': 666666666666666,
 'pageCount': 666,contextInfo: { externalAdReply: { showAdAttribution: true,
 mediaType:  2,
