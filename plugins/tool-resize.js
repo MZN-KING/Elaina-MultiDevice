@@ -8,16 +8,16 @@ import uploadFile from "../lib/uploadFile.js"
 let handler = async (m, { conn, usedPrefix, args}) => {
 	let towidth = args[0]
 	let toheight = args[1]
-	if (!towidth) throw 'size width?'
-	if (!toheight) throw 'size height?'
+	if (!towidth) throw '*Size width?*'
+	if (!toheight) throw '*Size height?*'
 	
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || ''
-if (!mime) throw "where the media?"
+if (!mime) throw "*Where is the media?*"
 
 let media = await q.download()
 let isMedia = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
-if (!isMedia) throw `Mime ${mime} tidak didukung`
+if (!isMedia) throw `*Media ${mime} is not supported!*`
 let link = await (isMedia ? uploadImage : uploadImage)(media)
 
 let source = await jimp.read(await link)
