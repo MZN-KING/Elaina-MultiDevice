@@ -8,7 +8,7 @@ if (jumlah && isNaN(jumlah)) throw '*⚠️ Quantity Must be a number!*\n*Use Pr
 let fixedNumber = nomor.replace(/[-+<>@]/g, '').replace(/ +/g, '').replace(/^[0]/g, '62') + '@s.whatsapp.net'
 let fixedJumlah = jumlah ? jumlah * 1 : 10
 if (fixedJumlah > 50) throw '*⚠️ Too many messages! Quantity must be less than 50 messages*️'
-await m.reply(`*[❗] SPAM PESAN KE NOMOR ${nomor} ITU SUKSES DILAKUKAN*\n*JUMLAH TERKIRIM:*\n*—◉ ${fixedJumlah} waktu!*`)
+await m.reply(`*❗Spam messages to number ${nomor} was successfully done!*\n*JUMLAH TERKIRIM:*\n*—◉ ${fixedJumlah} waktu!*`)
 for (let i = fixedJumlah; i > 1; i--) {
 if (i !== 0) conn.reply(fixedNumber, pesan.trim(), m)
 }}
