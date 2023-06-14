@@ -1,5 +1,5 @@
 var handler = async (m, { conn }) => {
-    if (!/viewOnce/.test(m.quoted?.mtype)) throw 'Itu Bukan Pesan ViewOnce'
+    if (!/viewOnce/.test(m.quoted?.mtype)) throw '*It\'s Not a ViewOnce Message!*'
 	let mtype = Object.keys(m.quoted.message)[0]
 	let buffer = await m.quoted.download()
 	let caption = m.quoted.message[mtype].caption || ''
